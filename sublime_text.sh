@@ -17,3 +17,16 @@ sudo mv $SUBLIME/ $OPT/
 rm -rf $DIR/
 sudo rm $BIN
 sudo ln -s $OPT/$SUBLIME/$EXEC $BIN
+cd $OPT/$SUBLIME
+sudo rm sublime.desktop
+sudo printf '\n%s\n' '[Desktop Entry]
+Name=Sublime
+Type=Application
+Exec=env UBUNTU_MENUPROXY=0 sublime
+Terminal=false
+Icon=sublime
+Comment=Sublime Text
+NoDisplay=false
+Categories=Development;
+Name[en]=Sublime' >> sublime.desktop
+sudo desktop-file-install sublime.desktop
