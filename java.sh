@@ -1,3 +1,3 @@
-sudo add-apt-repository ppa:numix/ppa
+sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+sudo apt-get install oracle-java8-installer
