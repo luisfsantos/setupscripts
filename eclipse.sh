@@ -1,4 +1,5 @@
 DOWNLOAD=eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+LINK=http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/$DOWNLOAD&mirror_id=1
 DIR=~/Downloads
 TEMP=$DIR/eclipse
 OPT=/opt
@@ -6,7 +7,9 @@ EXEC=eclipse
 BIN=/usr/bin/eclipse44
 
 cd $DIR
+wget $LINK
 tar -xvzf $DOWNLOAD
+rm $DOWNLOAD
 sudo rm -rf $OPT/eclipse
 sudo mv $TEMP $OPT/
 sudo rm $BIN
